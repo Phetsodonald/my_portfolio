@@ -18,6 +18,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
   
 
@@ -30,7 +31,8 @@
     padding: 1rem;
     overflow-x: hidden;
   }
-  
+ 
+  /*header css*/
 
 header{
     display: flex;
@@ -117,13 +119,13 @@ nav .sidebar a:hover {
 }
 
 
-
+/* main css*/
 
 main{
   margin-top: 5em;
 }
 
-
+/* intro css*/
 main .intro {
   display: flex;
   align-items: center;
@@ -163,36 +165,38 @@ main .intro img{
   outline: 2px solid var(--hover);
 }
 
-button{
+main .intro a{
   padding: 10px;
   border-radius: var(--radius);
-  color: var(--text);
+  color: #fff;
   transition: all 0.35s;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 
 
 .intro article .cv-btn{
   background-color: transparent;
-  border: 2px solid var(--hover);
+  border: 2px solid var(--accent);
 }
 
 
 .intro article .cv-btn:hover{
-  background-color: var(--hover);
+  background-color: var(--accent);
 }
 
 
 .intro article .contact-btn{
-  background-color: var(--hover);
+  background-color: var(--accent);
   border: none;
 }
 
 
 .intro article .contact-btn:hover{
   background-color: transparent;
-  border: 2px solid var(--hover);
+  border: 2px solid var(--accent);
 }
 
 
@@ -205,6 +209,20 @@ button{
     display: block;
   }
 }
+@media (max-width:410px) {
+  header {
+    width: 100vw; 
+    padding: 0.5rem 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0; 
+    box-sizing: border-box; 
+  }
+}
+
+
+
 
 .intro {
   opacity: 0.1;
@@ -219,4 +237,220 @@ button{
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+main .about-section,main .skills-section,main .projects-section,main .contact-section{
+  margin-top: 15em;
+}
+
+/*about section*/
+
+.about-section {
+  background-color: var(--bg-secondary);
+  color: var(--text);
+  padding: 4rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  animation: fadeSlideIn 1s ease-out forwards;
+  animation-delay: 0.4s;
+
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text);
+}
+
+/*skills css*/
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 4rem;
+  max-width: 1000px;
+  margin-inline: auto;
+  animation: fadeSlideIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+  
+}
+
+.skills-section h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: var(--radius);
+  border: 1px solid var(--hover);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.skill-card i {
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.skill-card p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/*project css*/
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  color: var(--text);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--hover);
+}
+
+.projects-section h2{
+  text-align: center;
+  color: var(--accent);
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-weight: 500;
+  color: var(--hover);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+/*CONTACTS CSS*/
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto 5rem auto;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeSlideIn 1s ease-out forwards;
+  animation-delay: 0.7s;
+  
+}
+
+.contact-section h2 {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--hover);
+  border-radius: var(--radius);
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--hover);
+  color: var(--text);
+}
+
+/*footer css*/
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--bg-secondary);
+  color: var(--hover);
+  font-size: 0.9rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-top: 4rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: var(--hover);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
 }

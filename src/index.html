@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Phetso's Portfolio</title>
 </head>
 <body>
-    <body>
+    
     <header>
 
         <h1>Phetso.web</h1>
@@ -16,10 +18,10 @@
             <ul class="navigations">
                 
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
                     <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#FFFFFF"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg>
                 </li>
@@ -27,10 +29,10 @@
             </ul>
             <ul class="sidebar">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projets">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -47,8 +49,8 @@
                 I’ve worked on a variety of web projects — from personal blogs and email templates
                 to full-blown e-commerce sites.
               </p>
-              <button class="cv-btn">Download CV</button>
-              <button class="contact-btn">Contact Me</button>
+              <a href="#skills" class="cv-btn">view skills</a>
+              <a href="#contact" class="contact-btn">Contact Me</a>
             </article>
           
             <figure>
@@ -56,8 +58,119 @@
               </figure>
           </div>
           
+          <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+              <p>
+                Hey, I'm <strong>Phetso</strong> — a web developer in the making through the <strong>Umuzi program</strong>. I'm passionate about creating clean, responsive, and accessible websites that make a difference.
+              </p>
+              <p>
+                I enjoy turning ideas into real things using HTML, CSS, JavaScript, React, and Node.js. I’m all about continuous learning, collaboration, and building tech that solves real problems.
+              </p>
+              <p>
+                Outside of code, I’m probably deep in a dev video, sketching out ideas, or vibing to music. Let’s build something cool together.
+              </p>
+            </div>
+          </section>
+          
+          <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+              <div class="skill-card">
+                <i class="fab fa-html5 fa-3x"></i>
+                <p>HTML5</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-css3-alt fa-3x"></i>
+                <p>CSS3</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-js-square fa-3x"></i>
+                <p>JavaScript</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-react fa-3x"></i>
+                <p>React</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-node fa-3x"></i>
+                <p>Node.js</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-git fa-3x"></i>
+                <p>Git & GitHub</p>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-mobile-alt fa-3x"></i>
+                <p>Responsive Design</p>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-cogs fa-3x"></i>
+                <p>Problem Solving</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-python fa-3x"></i>
+                <p>Python</p>
+              </div>
+              <div class="skill-card">
+                <i class="fas fa-database fa-3x"></i>
+                <p>SQL</p>
+              </div>
+              <div class="skill-card">
+                <i class="fab fa-php fa-3x"></i>
+                <p>PHP</p>
+              </div>
+            </div>
+          </section>
 
+          <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+              <div class="project-card">
+                <h3>Project One</h3>
+                <p>🚧 Coming Soon</p>
+              </div>
+              <div class="project-card">
+                <h3>Project Two</h3>
+                <p>🚧 Coming Soon</p>
+              </div>
+              <div class="project-card">
+                <h3>Project Three</h3>
+                <p>🚧 Coming Soon</p>
+              </div>
+            </div>
+          </section>
+          
+
+          <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <form  action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+                <input type="hidden" name="access_key" value="3942d508-b2e2-4429-84ad-7639c2ae535b">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" rows="6" placeholder="Your Message..." required></textarea>
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              <button type="submit">Send Message</button>
+            </form>
+          </section>
+                
     </main>
+    <footer class="footer">
+        <div class="social-icons">
+          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:youremail@example.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+        <p>&copy; 2025 Phetso. Made with 💙 during the Umuzi journey.</p>
+      </footer>
+      
     <script src="../src/scripts/script.js"></script>
 </body>
 </html>
